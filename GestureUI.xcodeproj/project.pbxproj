@@ -15,6 +15,13 @@
 		5EC930072171F50400A485BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC930052171F50400A485BA /* LaunchScreen.storyboard */; };
 		5EC930122171F50400A485BA /* GestureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC930112171F50400A485BA /* GestureUITests.swift */; };
 		5EC9301D2171F50400A485BA /* GestureUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC9301C2171F50400A485BA /* GestureUIUITests.swift */; };
+		5EC9302B2171F5F700A485BA /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC9302A2171F5F700A485BA /* BGM.mp3 */; };
+		5EC930312171F60000A485BA /* tana_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC9302C2171F60000A485BA /* tana_02.mp3 */; };
+		5EC930322171F60000A485BA /* tana_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC9302D2171F60000A485BA /* tana_03.mp3 */; };
+		5EC930332171F60000A485BA /* not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC9302E2171F60000A485BA /* not.mp3 */; };
+		5EC930342171F60000A485BA /* tana_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC9302F2171F60000A485BA /* tana_01.mp3 */; };
+		5EC930352171F60000A485BA /* tana_04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EC930302171F60000A485BA /* tana_04.mp3 */; };
+		5EC930372171F60500A485BA /* backgrounds.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC930362171F60500A485BA /* backgrounds.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		5EC930182171F50400A485BA /* GestureUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC9301C2171F50400A485BA /* GestureUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureUIUITests.swift; sourceTree = "<group>"; };
 		5EC9301E2171F50400A485BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC9302A2171F5F700A485BA /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
+		5EC9302C2171F60000A485BA /* tana_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tana_02.mp3; sourceTree = "<group>"; };
+		5EC9302D2171F60000A485BA /* tana_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tana_03.mp3; sourceTree = "<group>"; };
+		5EC9302E2171F60000A485BA /* not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = not.mp3; sourceTree = "<group>"; };
+		5EC9302F2171F60000A485BA /* tana_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tana_01.mp3; sourceTree = "<group>"; };
+		5EC930302171F60000A485BA /* tana_04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tana_04.mp3; sourceTree = "<group>"; };
+		5EC930362171F60500A485BA /* backgrounds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgrounds.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,13 @@
 		5EC92FF82171F50200A485BA /* GestureUI */ = {
 			isa = PBXGroup;
 			children = (
+				5EC930362171F60500A485BA /* backgrounds.png */,
+				5EC9302A2171F5F700A485BA /* BGM.mp3 */,
+				5EC9302E2171F60000A485BA /* not.mp3 */,
+				5EC9302F2171F60000A485BA /* tana_01.mp3 */,
+				5EC9302C2171F60000A485BA /* tana_02.mp3 */,
+				5EC9302D2171F60000A485BA /* tana_03.mp3 */,
+				5EC930302171F60000A485BA /* tana_04.mp3 */,
 				5EC92FF92171F50200A485BA /* AppDelegate.swift */,
 				5EC92FFB2171F50200A485BA /* ViewController.swift */,
 				5EC92FFD2171F50200A485BA /* Main.storyboard */,
@@ -234,7 +255,14 @@
 			files = (
 				5EC930072171F50400A485BA /* LaunchScreen.storyboard in Resources */,
 				5EC930042171F50400A485BA /* Assets.xcassets in Resources */,
+				5EC930352171F60000A485BA /* tana_04.mp3 in Resources */,
+				5EC930332171F60000A485BA /* not.mp3 in Resources */,
+				5EC930312171F60000A485BA /* tana_02.mp3 in Resources */,
 				5EC92FFF2171F50200A485BA /* Main.storyboard in Resources */,
+				5EC930342171F60000A485BA /* tana_01.mp3 in Resources */,
+				5EC930372171F60500A485BA /* backgrounds.png in Resources */,
+				5EC9302B2171F5F700A485BA /* BGM.mp3 in Resources */,
+				5EC930322171F60000A485BA /* tana_03.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
