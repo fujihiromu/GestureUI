@@ -7,7 +7,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
     private var isScanning = false
     private var centralManager: CBCentralManager!
     private var peripheral: CBPeripheral!
-    var audioPlayer = [AVAudioPlayer!]()
+    var audioPlayer = [AVAudioPlayer?]()
     private var DEVICE_UUID = "00002A6E-0000-1000-8000-00805F9B34FB"
     private var DEVICE_CHAR_UUID = "00002A6E-0000-1000-8000-00805F9B34FB"
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
         audioSetup(name: "not", kind: "mp3")
         // セントラルマネージャ初期化
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,7 +106,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
             return
         }
         print("データ更新！ characteristic UUID: \(characteristic.uuid), value: \(characteristic.value!), value: \(characteristic.description)")
-        var data = NSData(data: characteristic.value!)
+        let data = NSData(data: characteristic.value!)
         print(data)
         var str : String = String(describing: data)
         //なぜか＜＞がのってくるので除去
