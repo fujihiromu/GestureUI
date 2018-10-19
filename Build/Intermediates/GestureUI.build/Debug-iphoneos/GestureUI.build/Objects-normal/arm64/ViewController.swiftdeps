@@ -123,6 +123,7 @@ depends-member:
 - !private ["SK", "range"]
 - !private ["SK", "removeSubrange"]
 - !private ["SK", "row"]
+- !private ["SB", "leastNormalMagnitude"]
 - !private ["Sz", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["So15CALayerDelegateP", "EditingStyle"]
@@ -263,6 +264,7 @@ depends-member:
 - !private ["So9CBServiceC", "characteristics"]
 - !private ["So6CBUUIDC", "init"]
 - !private ["So6CBUUIDC", "isEqual"]
+- !private ["12CoreGraphics7CGFloatV", "leastNormalMagnitude"]
 - ["s7CVarArgP", "AVAudioPlayer"]
 - !private ["s7CVarArgP", "CBCentralManager"]
 - !private ["s7CVarArgP", "CBUUID"]
@@ -304,6 +306,7 @@ depends-member:
 - !private ["s7CVarArgP", "isNotifying"]
 - !private ["s7CVarArgP", "isOn"]
 - !private ["s7CVarArgP", "isScanning"]
+- !private ["s7CVarArgP", "leastNormalMagnitude"]
 - !private ["s7CVarArgP", "music"]
 - !private ["s7CVarArgP", "name"]
 - ["s7CVarArgP", "numberOfSections"]
@@ -355,6 +358,7 @@ depends-member:
 - !private ["Sl", "row"]
 - ["SL", "init"]
 - ["SL", "init"]
+- !private ["SL", "leastNormalMagnitude"]
 - !private ["SL", "range"]
 - !private ["SL", "removeSubrange"]
 - !private ["SL", "row"]
@@ -453,6 +457,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "count"]
 - ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "leastNormalMagnitude"]
 - !private ["s17CustomReflectableP", "range"]
 - !private ["s17CustomReflectableP", "removeSubrange"]
 - !private ["s17CustomReflectableP", "row"]
@@ -501,6 +506,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "isNotifying"]
 - !private ["s23CustomStringConvertibleP", "isOn"]
 - !private ["s23CustomStringConvertibleP", "isScanning"]
+- !private ["s23CustomStringConvertibleP", "leastNormalMagnitude"]
 - !private ["s23CustomStringConvertibleP", "music"]
 - !private ["s23CustomStringConvertibleP", "name"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
@@ -550,6 +556,7 @@ depends-member:
 - !private ["Se", "count"]
 - ["Se", "init"]
 - ["Se", "init"]
+- !private ["Se", "leastNormalMagnitude"]
 - !private ["Se", "range"]
 - !private ["Se", "removeSubrange"]
 - !private ["Se", "row"]
@@ -562,6 +569,7 @@ depends-member:
 - !private ["SE", "count"]
 - ["SE", "init"]
 - ["SE", "init"]
+- !private ["SE", "leastNormalMagnitude"]
 - !private ["SE", "range"]
 - !private ["SE", "removeSubrange"]
 - !private ["SE", "row"]
@@ -610,6 +618,7 @@ depends-member:
 - !private ["SQ", "isNotifying"]
 - !private ["SQ", "isOn"]
 - !private ["SQ", "isScanning"]
+- !private ["SQ", "leastNormalMagnitude"]
 - !private ["SQ", "music"]
 - !private ["SQ", "name"]
 - ["SQ", "numberOfSections"]
@@ -664,7 +673,9 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "range"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "removeSubrange"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "substring"]
+- !private ["s25ExpressibleByFloatLiteralP", "leastNormalMagnitude"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "leastNormalMagnitude"]
 - !private ["s23ExpressibleByNilLiteralP", "connect"]
 - !private ["s23ExpressibleByNilLiteralP", "scanForPeripherals"]
 - !private ["s23ExpressibleByNilLiteralP", "stopScan"]
@@ -680,6 +691,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "removeSubrange"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "substring"]
 - !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SF", "leastNormalMagnitude"]
 - ["SH", "AVAudioPlayer"]
 - !private ["SH", "CBCentralManager"]
 - !private ["SH", "CBUUID"]
@@ -722,6 +734,7 @@ depends-member:
 - !private ["SH", "isNotifying"]
 - !private ["SH", "isOn"]
 - !private ["SH", "isScanning"]
+- !private ["SH", "leastNormalMagnitude"]
 - !private ["SH", "music"]
 - !private ["SH", "name"]
 - ["SH", "numberOfSections"]
@@ -1117,6 +1130,7 @@ depends-member:
 - !private ["So8NSStringC", "removeSubrange"]
 - !private ["So8NSStringC", "substring"]
 - !private ["Sj", "init"]
+- !private ["Sj", "leastNormalMagnitude"]
 - !private ["Sq", "connect"]
 - !private ["Sq", "scanForPeripherals"]
 - !private ["Sq", "stopScan"]
@@ -1140,7 +1154,9 @@ depends-member:
 - !private ["ST", "subscript"]
 - !private ["SZ", "init"]
 - !private ["s13SignedNumericP", "init"]
+- !private ["s13SignedNumericP", "leastNormalMagnitude"]
 - !private ["Sx", "init"]
+- !private ["Sx", "leastNormalMagnitude"]
 - ["SS", "init"]
 - ["SS", "init"]
 - !private ["SS", "range"]
@@ -2042,6 +2058,8 @@ depends-member:
 - ["9GestureUI14ViewControllerC", "viewForZooming"]
 - ["9GestureUI14ViewControllerC", "viewForZoomingInScrollView"]
 - !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s15_CVarArgAlignedP", "leastNormalMagnitude"]
+- !private ["s22_CVarArgPassedAsDoubleP", "leastNormalMagnitude"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "EditingStyle"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "image"]
@@ -2166,6 +2184,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "leastNormalMagnitude"]
 - !private ["s21_ObjectiveCBridgeableP", "range"]
 - !private ["s21_ObjectiveCBridgeableP", "removeSubrange"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
@@ -2181,6 +2200,7 @@ depends-nominal:
 - "Sa"
 - "s13ArrayProtocolP"
 - "SK"
+- !private "SB"
 - !private "Sz"
 - !private "Sb"
 - "So15CALayerDelegateP"
@@ -2194,6 +2214,7 @@ depends-nominal:
 - "So20CBPeripheralDelegateP"
 - !private "So9CBServiceC"
 - !private "So6CBUUIDC"
+- !private "12CoreGraphics7CGFloatV"
 - "s7CVarArgP"
 - "Sl"
 - "SL"
@@ -2208,11 +2229,13 @@ depends-nominal:
 - "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
+- !private "SF"
 - "SH"
 - !private "10Foundation9IndexPathV"
 - !private "Si"
@@ -2284,6 +2307,8 @@ depends-nominal:
 - "So16UIViewControllerC"
 - "9GestureUI14ViewControllerC"
 - !private "s18_BitwiseOperationsP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -2335,4 +2360,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d39ac1b95e7eebe7c7f604df64752486"
+interface-hash: "a89a8446b53e585adbe5d98b22dae783"

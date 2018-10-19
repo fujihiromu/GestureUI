@@ -218,6 +218,9 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "OK?"
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return .leastNormalMagnitude
+    }
     
 }
 
