@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		yu0RIHEpatbiebNtQ4RO0bUy4hI=
+		</data>
 		<key>BGM.mp3</key>
 		<data>
 		MB7Ao3HIjQUt00fk02E+Q6RMjWQ=
@@ -22,7 +26,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		6X+w3dDQhjSQvXhzo4ysrcTVNgg=
+		w+YFVC7BaTY/VINI84UF6f586cI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +34,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		tS/A+LoOOa7HZ3IIy37yfEPDnRk=
+		YkRmccuEluO0rhOWC9YxTIGjvVo=
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
@@ -156,9 +160,40 @@
 		<data>
 		VhqhykpNXKIaO2kNdV4l45Z6FaM=
 		</data>
+		<key>イラスト１.png</key>
+		<data>
+		32FQ6oywGOfg3LAuJ08UZR38IeE=
+		</data>
+		<key>イラスト２.png</key>
+		<data>
+		HlWuavIUvH7ICRQmhJb8JRrD108=
+		</data>
+		<key>イラスト３.png</key>
+		<data>
+		jYWEiGj5aZJw+rZFpbcQ2LVI+qA=
+		</data>
+		<key>イラスト４.png</key>
+		<data>
+		/kKP6+FHqgFY0/Ry7fBORpLpPoo=
+		</data>
+		<key>イラスト５.png</key>
+		<data>
+		SmKztfWcvXVLZaHbbNiU5VCuy0g=
+		</data>
+		<key>イラスト６.png</key>
+		<data>
+		BMgjAbyXld11awHqNVUI4gjkJOg=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yFVxyt5yxvxYHtK1rRd/dfgELnTM8IhI5R8loJ0G8KQ=
+			</data>
+		</dict>
 		<key>BGM.mp3</key>
 		<dict>
 			<key>hash2</key>
@@ -191,7 +226,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WOiwXJGF1bT6wzMKOJDjwHgfGGM284kHydepuFhGt5k=
+			7Hp6x1z4Y5vd2DJMe1xAvtqOQhcoSj8U8kowi3YGHzU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -205,7 +240,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tZJ3LPfJV7ghjaf/6jRKEmpF8Q6QbIqH7MJLHIF3NFs=
+			WsuQsX+OVFwgG/JUbywviEZyHnVwyEQlCQ9zcwNOH1w=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
@@ -409,6 +444,48 @@
 			<key>hash2</key>
 			<data>
 			2z9aJEis7hQ1+oZLk4gh7HGx3UiZshamRDk819+M6Is=
+			</data>
+		</dict>
+		<key>イラスト１.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cz2LXKKfbTTyW58XqE02HbZBlYqSfYIB+igYwkEx1gY=
+			</data>
+		</dict>
+		<key>イラスト２.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z16VsrsTeI652QS6oD6ir+aj3ATK0vZnhITmRUz71wA=
+			</data>
+		</dict>
+		<key>イラスト３.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KRwvyyv6kOg2flDtlW52qgQtQvIkOeDR9YnTaFcLJWY=
+			</data>
+		</dict>
+		<key>イラスト４.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TgHRAa3907jhafda1Xpqiuu+tSylSc/+TvxmouQxQb8=
+			</data>
+		</dict>
+		<key>イラスト５.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EN7K2HfnjwH6cNP5OebGBnontSd5Yhu3DPaz+K7wGK8=
+			</data>
+		</dict>
+		<key>イラスト６.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SfVUoLbOjTR3oRLKlLA6OisYMQXOBvA+A6SKqhRB0CM=
 			</data>
 		</dict>
 	</dict>

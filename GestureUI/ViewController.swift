@@ -2,7 +2,7 @@ import UIKit
 import CoreBluetooth
 import AVFoundation
 
-class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerDelegate,CBPeripheralDelegate{
+class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerDelegate,CBPeripheralDelegate,UITableViewDelegate, UITableViewDataSource{
     
     private var isScanning = false
     private var centralManager: CBCentralManager!
@@ -10,14 +10,24 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
     var audioPlayer = [AVAudioPlayer?]()
     private var DEVICE_UUID = "00002A6E-0000-1000-8000-00805F9B34FB"
     private var DEVICE_CHAR_UUID = "00002A6E-0000-1000-8000-00805F9B34FB"
+    private var music = Music()
+    
+    @IBOutlet weak var table: UITableView!
+    
+    // section毎の画像配列
+    let imgArray: NSArray = [
+        "イラスト１","イラスト２",
+        "イラスト３","イラスト４",
+        "イラスト５","イラスト６"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioSetup(name: "BGM", kind: "mp3")
-        audioSetup(name: "tana_01", kind: "mp3")
-        audioSetup(name: "tana_02", kind: "mp3")
-        audioSetup(name: "tana_03", kind: "mp3")
-        audioSetup(name: "tana_04", kind: "mp3")
-        audioSetup(name: "not", kind: "mp3")
+        music.audioSetup(name: "BGM", kind: "mp3")
+        music.audioSetup(name: "tana_01", kind: "mp3")
+        music.audioSetup(name: "tana_02", kind: "mp3")
+        music.audioSetup(name: "tana_03", kind: "mp3")
+        music.audioSetup(name: "tana_04", kind: "mp3")
+//        music.audioSetup(name: "not", kind: "mp3")
         // セントラルマネージャ初期化
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
         
@@ -91,7 +101,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
         } else {
             print("Notify状態更新成功！characteristic UUID:\(characteristic.uuid), isNotifying: \(characteristic.isNotifying)")
         }
-        
         ////スキャン開始
         isScanning = true
         centralManager.scanForPeripherals(withServices: nil, options: nil)
@@ -107,7 +116,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
         }
         print("データ更新！ characteristic UUID: \(characteristic.uuid), value: \(characteristic.value!), value: \(characteristic.description)")
         let data = NSData(data: characteristic.value!)
-        print(data)
+        
         var str : String = String(describing: data)
         //なぜか＜＞がのってくるので除去
         if let range = str.range(of: "<"){
@@ -117,7 +126,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
             str.removeSubrange(range)
         }
         print(str)
-        decision(str: str)
+        decisionPlay(str: str)
     }
     
     @IBOutlet weak var ID: UILabel!
@@ -155,108 +164,59 @@ class ViewController: UIViewController, CBCentralManagerDelegate, AVAudioPlayerD
             isScanning = false
         }
     }
-    func audioSetup(name :String,kind :String){
-        var samplePlayer:AVAudioPlayer!
-        // 再生する audio ファイルのパスを取得
-        let audioPath = Bundle.main.path(forResource: name, ofType:kind)!
-        let audioUrl = URL(fileURLWithPath: audioPath)
-        // auido を再生するプレイヤーを作成する
-        var audioError:NSError?
-        do {
-            samplePlayer = try AVAudioPlayer(contentsOf: audioUrl)
-        } catch let error as NSError {
-            audioError = error
-            samplePlayer = nil
-        }
+    func decisionPlay(str : String){
+        let musicnumber = Int(str,radix:16)!
+        music.playAudiofile(number: musicnumber)
+    }
+    
+    
+    //Table Viewのセルの数を指定
+    func tableView(_ table: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return music.audioPlayer.count
+    }
+    
+    
+    //各セルの要素を設定する
+    func tableView(_ table: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // エラーが起きたとき
-        if let error = audioError {
-            print("Error \(error.localizedDescription)")
-        }
-        samplePlayer.delegate = self
-        samplePlayer.prepareToPlay()
-        audioPlayer.append(samplePlayer);
+        // tableCell の ID で UITableViewCell のインスタンスを生成
+        let cell = table.dequeueReusableCell(withIdentifier: "TableCell",
+                                             for: indexPath)
+        
+        let img = UIImage(named: imgArray[indexPath.row] as! String)
+        
+        // Tag番号 1 で UIImageView インスタンスの生成
+        let imageView = cell.viewWithTag(1) as! UIImageView
+        imageView.image = img
+        
+        // Tag番号 ２ で UILabel インスタンスの生成
+        let label1 = cell.viewWithTag(2) as! UILabel
+        label1.text = "No." + String(indexPath.row + 1)
+        
+        // Tag番号 ３ で UILabel インスタンスの生成
+//        let label2 = cell.viewWithTag(3) as! UILabel
+//        label2.text = String(describing: label2Array[indexPath.row])
+        
+        return cell
+    }
+    // Cell の高さを１２０にする
+    func tableView(_ table: UITableView,heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 105.0
     }
     
-    func decision(str : String){
-        print(str)
-        if(str == "01"){
-            Tapped_01();
-        }else if(str == "02"){
-            Tapped_02();
-        }else if(str == "03"){
-            Tapped_03();
-        }else if(str == "04"){
-            Tapped_04();
-        }else if(str == "05"){
-            Tapped_not();
-        }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
     }
     
-    func Tapped_00() {
-        if ( audioPlayer[1]!.isPlaying ){
-            audioPlayer[1]!.currentTime = 0
-            audioPlayer[1]!.play()
-        }
-        else{
-            audioPlayer[1]!.play()
-        }
-    }
-    // ボタンがタップされた時の処理
-    func Tapped_01() {
-        if ( audioPlayer[1]!.isPlaying ){
-            audioPlayer[1]!.currentTime = 0
-            audioPlayer[1]!.play()
-        }
-        else{
-            audioPlayer[1]!.play()
-        }
-    }
-    func Tapped_02() {
-        if ( audioPlayer[2]!.isPlaying ){
-            audioPlayer[2]!.currentTime = 0
-            audioPlayer[2]!.play()
-        }
-        else{
-            audioPlayer[2]!.play()
-        }
-    }
-    func Tapped_03() {
-        if ( audioPlayer[3]!.isPlaying ){
-            audioPlayer[3]!.currentTime = 0
-            audioPlayer[3]!.play()
-        }
-        else{
-            audioPlayer[3]!.play()
-        }
-    }
-    func Tapped_04() {
-        if ( audioPlayer[4]!.isPlaying ){
-            audioPlayer[4]!.currentTime = 0
-            audioPlayer[4]!.play()
-        }
-        else{
-            audioPlayer[4]!.play()
-        }
-    }
-    //    @IBAction func Tapped_BGM(_ sender : UIButton) {
-    //        if ( audioPlayer[0]!.isPlaying ){
-    //            audioPlayer[0]!.setVolume(0.1, fadeDuration: 60)
-    //            audioPlayer[0]!.currentTime = 0
-    //            audioPlayer[0]!.play()
-    //        }
-    //        else{
-    //            audioPlayer[0]!.play()
-    //        }
-    //    }
-    func Tapped_not() {
-        if ( audioPlayer[5]!.isPlaying ){
-            audioPlayer[5]!.currentTime = 0
-            audioPlayer[5]!.play()
-        }
-        else{
-            audioPlayer[5]!.play()
-        }
+    /*
+     * 各indexPathのcellのスワイプメニューに表示するデフォルトの削除ボタンのタイトルを指定します．
+     * nilを指定するとデフォルトの文字列が表示されます．
+     * tableView(_:editActionsForRowAt:)でスワイプメニューをカスタマイズしている際には本メソッドは呼ばれません．
+     */
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "OK?"
     }
     
 }

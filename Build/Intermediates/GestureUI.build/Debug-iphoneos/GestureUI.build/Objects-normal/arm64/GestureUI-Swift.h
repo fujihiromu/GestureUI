@@ -165,6 +165,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import AVFoundation;
 @import CoreBluetooth;
+@import CoreGraphics;
+@import Foundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -198,6 +201,13 @@ SWIFT_CLASS("_TtC9GestureUI11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC9GestureUI5Music")
+@interface Music : NSObject <AVAudioPlayerDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
 @class CBCentralManager;
 @class CBPeripheral;
 @class CBService;
@@ -205,11 +215,13 @@ SWIFT_CLASS("_TtC9GestureUI11AppDelegate")
 @class UILabel;
 @class NSNumber;
 @class UISwitch;
+@class UITableViewCell;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC9GestureUI14ViewController")
-@interface ViewController : UIViewController <AVAudioPlayerDelegate, CBCentralManagerDelegate, CBPeripheralDelegate>
+@interface ViewController : UIViewController <AVAudioPlayerDelegate, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified table;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
@@ -223,6 +235,11 @@ SWIFT_CLASS("_TtC9GestureUI14ViewController")
 /// /    // 周辺にあるデバイスを発見すると呼ばれる
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
 - (IBAction)scanBtnTappedWithSender:(UISwitch * _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)table numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)table cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)table heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCellEditingStyle)tableView:(UITableView * _Nonnull)tableView editingStyleForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

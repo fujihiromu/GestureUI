@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E7F681A2179790C00A881EE /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F68192179790C00A881EE /* Music.swift */; };
+		5E7F68212179B19000A881EE /* イラスト３.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F681B2179B18F00A881EE /* イラスト３.png */; };
+		5E7F68222179B19000A881EE /* イラスト４.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F681C2179B18F00A881EE /* イラスト４.png */; };
+		5E7F68232179B19000A881EE /* イラスト１.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F681D2179B18F00A881EE /* イラスト１.png */; };
+		5E7F68242179B19000A881EE /* イラスト５.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F681E2179B19000A881EE /* イラスト５.png */; };
+		5E7F68252179B19000A881EE /* イラスト６.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F681F2179B19000A881EE /* イラスト６.png */; };
+		5E7F68262179B19000A881EE /* イラスト２.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F68202179B19000A881EE /* イラスト２.png */; };
 		5EC92FFA2171F50200A485BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC92FF92171F50200A485BA /* AppDelegate.swift */; };
 		5EC92FFC2171F50200A485BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC92FFB2171F50200A485BA /* ViewController.swift */; };
 		5EC92FFF2171F50200A485BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC92FFD2171F50200A485BA /* Main.storyboard */; };
@@ -42,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E7F68192179790C00A881EE /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		5E7F681B2179B18F00A881EE /* イラスト３.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イラスト３.png"; sourceTree = "<group>"; };
+		5E7F681C2179B18F00A881EE /* イラスト４.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イラスト４.png"; sourceTree = "<group>"; };
+		5E7F681D2179B18F00A881EE /* イラスト１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イラスト１.png"; sourceTree = "<group>"; };
+		5E7F681E2179B19000A881EE /* イラスト５.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イラスト５.png"; sourceTree = "<group>"; };
+		5E7F681F2179B19000A881EE /* イラスト６.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イラスト６.png"; sourceTree = "<group>"; };
+		5E7F68202179B19000A881EE /* イラスト２.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イラスト２.png"; sourceTree = "<group>"; };
 		5EC92FF62171F50200A485BA /* GestureUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC92FF92171F50200A485BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC92FFB2171F50200A485BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +127,12 @@
 		5EC92FF82171F50200A485BA /* GestureUI */ = {
 			isa = PBXGroup;
 			children = (
+				5E7F681D2179B18F00A881EE /* イラスト１.png */,
+				5E7F68202179B19000A881EE /* イラスト２.png */,
+				5E7F681B2179B18F00A881EE /* イラスト３.png */,
+				5E7F681C2179B18F00A881EE /* イラスト４.png */,
+				5E7F681E2179B19000A881EE /* イラスト５.png */,
+				5E7F681F2179B19000A881EE /* イラスト６.png */,
 				5EC930362171F60500A485BA /* backgrounds.png */,
 				5EC9302A2171F5F700A485BA /* BGM.mp3 */,
 				5EC9302E2171F60000A485BA /* not.mp3 */,
@@ -122,6 +142,7 @@
 				5EC930302171F60000A485BA /* tana_04.mp3 */,
 				5EC92FF92171F50200A485BA /* AppDelegate.swift */,
 				5EC92FFB2171F50200A485BA /* ViewController.swift */,
+				5E7F68192179790C00A881EE /* Music.swift */,
 				5EC92FFD2171F50200A485BA /* Main.storyboard */,
 				5EC930032171F50400A485BA /* Assets.xcassets */,
 				5EC930052171F50400A485BA /* LaunchScreen.storyboard */,
@@ -258,11 +279,17 @@
 				5EC930352171F60000A485BA /* tana_04.mp3 in Resources */,
 				5EC930332171F60000A485BA /* not.mp3 in Resources */,
 				5EC930312171F60000A485BA /* tana_02.mp3 in Resources */,
+				5E7F68242179B19000A881EE /* イラスト５.png in Resources */,
+				5E7F68252179B19000A881EE /* イラスト６.png in Resources */,
 				5EC92FFF2171F50200A485BA /* Main.storyboard in Resources */,
+				5E7F68222179B19000A881EE /* イラスト４.png in Resources */,
 				5EC930342171F60000A485BA /* tana_01.mp3 in Resources */,
+				5E7F68232179B19000A881EE /* イラスト１.png in Resources */,
 				5EC930372171F60500A485BA /* backgrounds.png in Resources */,
+				5E7F68262179B19000A881EE /* イラスト２.png in Resources */,
 				5EC9302B2171F5F700A485BA /* BGM.mp3 in Resources */,
 				5EC930322171F60000A485BA /* tana_03.mp3 in Resources */,
+				5E7F68212179B19000A881EE /* イラスト３.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +317,7 @@
 				5EC930022171F50200A485BA /* GestureUI.xcdatamodeld in Sources */,
 				5EC92FFC2171F50200A485BA /* ViewController.swift in Sources */,
 				5EC92FFA2171F50200A485BA /* AppDelegate.swift in Sources */,
+				5E7F681A2179790C00A881EE /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

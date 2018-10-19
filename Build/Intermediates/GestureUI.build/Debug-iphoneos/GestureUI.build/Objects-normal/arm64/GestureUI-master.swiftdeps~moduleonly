@@ -1,6 +1,7 @@
 version: "Apple Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1)"
 options: "aaa3c812595d5377fe296c03aded40a9"
-build_time: [1539915117, 498748000]
+build_time: [1539932665, 84291000]
 inputs:
-  "/Users/fuji1153/Desktop/iOS/GestureUI/GestureUI/ViewController.swift": [1539915117, 0]
+  "/Users/fuji1153/Desktop/iOS/GestureUI/GestureUI/ViewController.swift": [1539932664, 0]
   "/Users/fuji1153/Desktop/iOS/GestureUI/GestureUI/AppDelegate.swift": [1539423618, 0]
+  "/Users/fuji1153/Desktop/iOS/GestureUI/GestureUI/Music.swift": [1539928334, 0]
